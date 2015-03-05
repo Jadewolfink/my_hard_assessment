@@ -1,0 +1,15 @@
+
+
+<h2> Here is your question </h2>
+
+  <% a = Deck.last %>
+  <% c = a.cards.shuffle.shift %>
+  <%= b = a.cards.shuffle.shift.question %> 
+
+</br></br>
+  <form action="/deck/<%=a.id%>/cards/<%=c.id%>" method="post">
+ Answer <input type="text" name=":answer">
+ <br><br>
+ <input type="submit" value=" Enter ">
+ <br>
+ </form>
